@@ -1,0 +1,126 @@
+:root {
+  --background: #ffeead;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  transition: 0.5s;
+  background-color: var(--background);
+}
+
+.text-content {
+  position: relative;
+  font-size: 4em;
+  letter-spacing: 15px;
+  color: #0e3742;
+  text-transform: none;
+  width: 100%;
+  text-align: center;
+  -webkit-box-reflect: below 1px linear-gradient (transparent, #0008);
+  line-height: 0.7em;
+  outline: none;
+  animation: animate 5s linear infinite;
+}
+
+@keyframes sway {
+  0% {
+    transform: rotate(1deg);
+  }
+  50% {
+    transform: rotate(-1deg);
+  }
+  100% {
+    transform: rotate(1deg);
+  }
+}
+
+.LightSwitch {
+  position: fixed;
+  top: -60px;
+  right: 80px;
+  border: none;
+  background-color: transparent;
+  transform-origin: top;
+  transform: rotate(1deg);
+  animation-name: sway;
+  animation-timing-function: ease-in-out;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  transition: 0.2s;
+}
+
+.LightSwitch:active {
+  top: -5px;
+  transition: 0.2s;
+}
+
+.LightSwitch:hover {
+  cursor: pointer;
+}
+
+.LightRope {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Bead {
+  height: 15px;
+  width: 15px;
+  background-color: #ffaaa5;
+  border-radius: 50%;
+  display: block;
+}
+.Bead2 {
+  height: 17px;
+  width: 7px;
+  background-color: #a8e6cf;
+  border-radius: 0;
+  display: block;
+}
+
+.Bob {
+  border-bottom: 40px solid #ff8b94;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  height: 0;
+  width: 15px;
+  border-radius: 50px 50px 50px 50px;
+}
+
+@keyframes animate {
+  0%,
+  18%,
+  20%,
+  50.1%,
+  60%,
+  65.1%,
+  80%,
+  90.1%,
+  92% {
+    color: #0e3742;
+    text-shadow: none;
+  }
+  18.1%,
+  20.1%,
+  30%,
+  50%,
+  60.1%,
+  65%,
+  80.1%,
+  90%,
+  92.1%,
+  100% {
+    color: #fff;
+    text-shadow: 0 0 10px #03bcf4, 0 0 20px #03bcf4, 0 0 40px #03bcf4,
+      0 0 80px #03bcf4, 0 0 160px #03bcf4;
+  }
+}
